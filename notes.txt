@@ -1,0 +1,45 @@
+
+Abstract
+
+The citation in the abstract?
+
+Section 1.
+
+In the introduction we need clearer explanations of the model we are presenting - and why we are using two (to show the same thing). 
+
+Check I'be got the maths right. I'm a little uncertain of the probabilties as derived from the 1/kcat and (1 - 1/kcat). I need to run this by you.
+
+Section 2.
+
+Move the beginning statement "The initial modeling software used was Kinetiscope from Columbia Hill..." further down. We need the section to begin with a clear statement of what we are modelling. 
+
+Captions for figure 1 and 2 - do these need amending?
+
+Section 3.
+
+After eqn 6, the statement:
+
+"Based on the published rates of free radicals interaction with superoxide dismutase, catalase, glutathione, ascorbic acid, and protein it is evident that the rates are k_ea  k_nea  and k_ prot..."
+
+is repeated after eqn 11:
+
+"...the rate of neutralization of free radical species by enzymatic antioxidants is far greater than the rate of neutralization by non-enzymatic antioxidants, which in turn occurs at a much faster rate than damage to proteins by the free radical species, that is,  k ea  k nea  k prot..."
+
+Can you give some thought on how to deal with this?
+
+Is this sentence correct?
+
+"Molecules with a size of the order of molecules such as glutathione and ascorbic acid..."
+
+Conclusions
+
+Can we change this:
+"The models used are limited in the number of parameters..."
+
+I know what you mean but the word "limited" has a negative conatation. Can put more positve spin on this statement?
+
+
+
+
+
+
