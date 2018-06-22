@@ -94,7 +94,7 @@
 
 
 
-\journal{Theoretical Biology}
+\journal{Journal of Theoretical Biology}
 
 \begin{document}
 \bibliographystyle{elsarticle-harv} 
@@ -139,15 +139,7 @@
 
 \begin{abstract}
 
-In spite of considerable research, and many clinical trials involving 
-thousands of patients, there is a conspicuous lack of antioxidant 
-therapies available. 
-In this paper we present results for the interaction and neutralization of a free radical species.
-We adopt two modeling techniques, one based upon Gillespie’s Stochastic Simulation Algorithm
-and one based upon a  discrete Markov chain. 
-The results leads us to 
-question the basis of antioxidant therapies based on trapping or scavenging of reactive
-species, and suggest that their failure in clinical trials is to be expected.
+In spite of considerable research, and many clinical trials involving thousands of patients, there is a conspicuous lack of antioxidant therapies available. In this paper we present results for the interaction and neutralization of a free radical species. We adopt two modeling techniques, one based upon Gillespie’s Stochastic Simulation Algorithm and one based upon a discrete Markov chain. An advantage of these models is that they incorporate values for the number of molecules present per unit volume, and with the Markov chain model, the relative dimensions of these molecules in contrast to ordinary differential equations. By means of thiese models we question the basis of antioxidant therapies based trapping or scavenging of reactive species. We demonstrate the extraordinary capacity of the enzymatic antioxidant defenses relative to non-enzymatic defenses. We conclude that, if the concentration of an non-enzymatic antioxidant is too low there is little chance of collision and interaction with a free radical species. Furthermore, if the rate of reaction between the free radical and the non-enzymatic antioxidant is below a necessary threshold then the effect of an antioxidant will be dwarfed by the free radical defense systems naturally present. As such we suggest that failure of most antioxidant therapies in clinical trials is to be expected.
 
 %
 %needs to be present at
@@ -181,22 +173,22 @@ Antioxidant, Free Radical, ROS, Gillespie, Markov Model
 \section{Introduction}
 \label{}
 
-The free radical theory of ageing, \citet{Harman:1956wu} put forward the hypothesis that
+The free radical theory of ageing, \citet{Harman:1956wu}, put forward the hypothesis that
 free radicals, usually reactive oxygen species, generated as a by product of respiration are a causal
-factor in the process of ageing. This is due to the fact that free radicals are highly reactive
+factor in the process of ageing. This is based on the supposition that free radicals are highly reactive
 and are a cause of continual and cumulative damage to cellular protein, lipid, and
 DNA (the soma). This damage, unless repaired, will lead to a progressive
 deterioration of cellular function. Cumulative damage by free radicals has been associated
 with many diseases, notably age related neurodegenerative conditions such as
 Alzheimer's. This is in part because the brain has a high metabolic demand and a
 subsequent high oxygen demand, while being essentially post-mitotic, \citet{Cobley:2018kt}.  
-While it is well known that antioxidants like ascorbic acid can neutralize many free radical
-species, the use of antioxidants in clinical trials has shown them to be predominately ineffective \citet{Steinhubl:2008el}.  
+While it is well established that antioxidants like ascorbic acid can neutralize many free radical
+species, the use of antioxidants in clinical trials has shown them to be predominately ineffective, \citet{Steinhubl:2008el}. 
+The chemistry of the free radical trapping proporties of vitamin c (ascorbic acid) are well documented, however, just because the chemistry is plausible does not necessitate that it occurs $in$ $vivo$ or or that it is effective. Ascorbic acid can be taken orally but but there is negligable absorbtion at doses greater than 500mg (about 5 oranges worth) at which point it will increase the plasma concentration to a steady state of 80 micromolar, \citet{Padayatty:2003}. The cells and tissues of a typical and well nourished person will already contain ascorbic acid at 1-4 millimolar. One would assume that if ascorbic acid is already present at a high concentration and provided an effective defense against free radicals, but would be even more effective at a slightly higher concentration, that this would have occured.
 
-The mechanism of damage to the soma can be reduced to a number of basic
-processes. The generation of free radicals and their subsequent neutralization by specific
-enzymatic means, neutralization by non-enzymatic antioxidants, or damage to the
-soma. This is shown schematically in Fig \ref{fig:g1}.
+To address the question of the effectiveness of antioxidants, the process of oxidative damage and the mechanisms to avoid it can be reduced to a number of basic processes. Namely, the generation of free radicals and their subsequent neutralization by specific enzymatic means, neutralization by non-enzymatic antioxidants, or damage to the soma. This is shown schematically in Fig \ref{fig:g1}.
+
+
 
 
 \begin{figure}
@@ -208,22 +200,24 @@ free radical species can be neutralized by scavenging antioxidants, enzymatic de
 interact with and damage components of the cell.}
 \end{figure}
 
-In this paper we adopt two modeling techniques, namely Gillespie’s Stochastic Simulation Algorithm
+In this paper we adopt two modeling techniques, namely Gillespie's Stochastic Simulation Algorithm
 (using Kinetiscope) and a discrete Markov chain. The two models yield comparable results.
 
 
 \section{Model of Free Radical Interactions}
 
 In this section we develop a model of free radical interactions 
-by imagining a highly simplified organelle, much like a
+by imagining a highly simplified organelle, in function much like a
 mitochondrion. The parameters for the number and size of molecules in the cell were taken from
-\inquotes{By the numbers} website\footnote{http://bionumbers.hms.harvard.edu/}
-and associated publications, \citet{Milo:2015uq}.
-This imaginary organelle, at $400 \mu m^3$, contains $1 \times 10^9$ protein molecules, $1 \times 10^{10}$
-molecules of water, and $1 \times 10^8$ molecules of a non-enzymatic antioxidant.
+the \emph{By the numbers} website\footnote{http://bionumbers.hms.harvard.edu/}
+and associated publications, \citet{Milo:2015uq}. A typical human cell such as a fibroblast has a volume of $2,000 \mu m^3$, and the mass of mitochondria is 20-25\% of the total cell volume.
+As such, we defined the volume of the imaginary organelle as $400 \mu m^3$ and assigned arbitrary values to the cell 
+contents, that is, $1 \times 10^9$ protein molecules, $1 \times 10^{10}$
+molecules of water, and $1 \times 10^8$ molecules of a non-enzymatic antioxidant, \citet{barevan:1989}.
 Of the protein present $3 \times 10^7$ molecules (3\%) are an enzymatic antioxidant.
 For interaction with the free radical the initial rate constant assumed for the non-enzymatic antioxidant was
-$3 \times 10^5 M^{-1} s^{-1}$, and for the enzymatic antioxidant is $1 \times 10^ 9 M^{-1} s^{-1}$.
+$3 \times 10^5 M^{-1} s^{-1}$, and for the enzymatic antioxidant it was $1 \times 10^ 9 M^{-1} s^{-1}$. 
+The high value for the enzymatic antioxidant is due to the fact that superoxide dismutase is an unusual enzyme and operates far faster than most enzymes, and may be as fast as it is theoretically possible.
 
 %Kinetiscope is based
 %on stochastic algorithms, \citet{Gillespie:2007bx}, instead of integration of differential
@@ -242,10 +236,10 @@ and superoxide dismutase, \citet{Milgrom:2016iw}. The rate for damage to the som
 interaction with methionine protein residues, \citet{Davies:2016kz}.
 An arbitrary rate of free radical generation of $1 \times 10^{-6} s^{-1}$ was selected to give a
 measurable rate of protein oxidation in a reasonable time span. The actual rate of
-generation of free radicals, specifically superoxide, by mitochondria has not been accurately determined \cite{Murphy:2009jy}. This is in part due to the high catalytic rate of enzymes such as superoxide dismutase and catalase which maintain a low steady state level of superoxide and hydrogen peroxide.
+generation of free radicals, specifically superoxide, by mitochondria has not been accurately determined (\cite{Murphy:2009jy}). This is in part due to the high catalytic rate of enzymes such as superoxide dismutase and catalase which maintain a low steady state level of superoxide and hydrogen peroxide.
 
 In the absence of enzymatic antioxidants or non-enzymatic antioxidants the rate of damage to the protein was, as would be
-expected, linear and proportional (not shown).
+expected proportional to the rate of generation of free radicals (not shown).
 Enzymes involved in the defence against free radical damage such as superoxide dismutase and catalase have extremely high catalytic rates, and are some of the most abundant proteins present in the cell ($\sim 1-3$\% from PaxDb:
 Protein Abundance Database\footnote{https://pax-db.org}). If the concentration of the enzymatic antioxidant is
 set to 3\% of the total protein and the $k_{cat}/K_M$ is varied it can be seen (see Fig \ref{fig:g2a}) that
@@ -253,7 +247,7 @@ in order to reduce the rate of damage to the soma (protein in this model) to a n
 $3 \times 10^8 M^{-1} s^{-1}$ to $1 \times 10^9 M^{-1} s^{-1}$ is required.
 Coincidentally this is close to the observed
 $k_{cat}/K_M$ of enzymes such as catalase and superoxide dismutase, \citet{Milgrom:2016iw}. Conversely if we define the $k_{cat}/K_M$ of
-the enzymatic antioxidant as $1 \times 10^9 M^{-1} s^{-1}$ and vary the concentration of the enzymatic antioxidant, the plateau
+the enzymatic antioxidant as $1 \times 10^9 M^{-1} s^{-1}$ and vary the concentration of the enzymatic antioxidant, the
 concentration at which there is negligible oxidative damage to the soma is at
 0.3-1\% of the total protein which is reasonably close to the concentration of enzymes such as catalase and superoxide dismutase
 at 1-3\% (Fig \ref{fig:g2b}).
@@ -276,8 +270,7 @@ $10^8$ molecules per cell or greater.
 \begin{center}
 \includegraphics[width=0.8\textwidth]{Fig2B.eps}
 \end{center}
-\caption{\label{fig:g2b} Variation in the assigned rate constant for the reaction of enzymatic antioxidant with the free radical species.
-To be effect as an enzymatic antioxidant the assigned rate constant needs to be greater $10^6 M^{-1} s^{-1}$.}
+\caption{\label{fig:g2b} The assigned rate constant for the reaction of enzymatic antioxidant with the free radical species can be varied. If the number of molecules per organelle is defined as $10^8$, then a $k_{cat}/K_M$ greater than  $10^7 M^{-1} s^{-1}$ is necessary. For reference the $k_{cat}/K_M$ of superoxide dismutase is $10^9 M^{-1} s^{-1}$}
 \end{figure}
 
 
@@ -300,8 +293,8 @@ oxidized form. When the store of the non-enzymatic antioxidant is exhausted ther
 the cellular proteins.}
 \end{figure}
 
-These results indicate that non-enzymatic antioxidant are ineffective at ameliorating oxidative damage from free radicals.
-This is contrary to conventional wisdom, as such, we desired confirmation of this result. Thus, we developed a
+These results indicate that, in comparson to endogenous antioxidants, non-enzymatic antioxidant are relatively ineffective at ameliorating oxidative damage from free radicals.
+This is contrary to the conventional wisdom that exogenous antioxidants can reduce free radical damage, as such, we desired confirmation of this result. Thus, we developed a
 second model based upon a discrete time Markov chain which we describe in  Section \ref{sec:mm} below.
 
 \section{Markov Chain}
@@ -310,7 +303,7 @@ second model based upon a discrete time Markov chain which we describe in  Secti
 In this section we describe a discrete time Markov chain to model the
 trajectory of a free radical within a cell. The cell in this model is comprised
 of water molecules, protein molecules, enzymatic antioxidants, and non-enzymatic
-antioxidants as previously. We further assume that there is a steady rate of free radical production.
+antioxidants as previously defined. We further assume that there is a steady rate of free radical production.
 During each time interval a free radical encounters either a water molecule, a
 protein, an enzymatic antioxidant, or a non-enzymatic antioxidant.
 We consider the trajectory of a free radical within a cell and its
@@ -553,7 +546,7 @@ this interaction is limited by physical size and numerical presence.
 \section{Conclusions}
 
 
-In this paper we have present two models of free radical interactions in a cell. The first employs
+In this paper we present two models of free radical interactions in a cell. The first employs
 Gillespie’s Stochastic Simulation Algorithm from the stochastic modeling tool, Kinetiscope. The second
 model is based upon a discrete Markov chain. 
 These models are, purposely, highly abstracted and reductive because they are not intended to mimic or replicate an actual biological system. 
@@ -564,7 +557,7 @@ The models used different approaches but their results are in qualitative agreem
 They illustrate that enzymes involved in defense against oxidative damage,
 such as superoxide dismutase and catalase  are already extremely effective. At the
 concentrations seen $in$ $vivo$ enzymatic antioxidants such as superoxide dismutase or catalase will essentially eliminate oxidative damage. This is not
-surprising, to achieve the catalytic rates observed empirically. Enzymes such as superoxide dismutase and catalase must have been subject to
+surprising, to achieve the catalytic rates observed empirically, enzymes such as superoxide dismutase and catalase must have been subject to
 strong selective pressure and as such are probably optimal in terms of catalytic rate and concentration. Non-enzymatic antioxidants such as glutathione or ascorbic acid have relatively modest rates of reaction with superoxide, in spite of the presumably identical
 selective pressures that acted on the enzymatic antioxidants. Based on these results we would infer that defense against free radicals is
 not a major role for these compounds.
@@ -578,12 +571,12 @@ trapping or scavenging free radicals, needs to be present at
 a sufficiently high concentration to give a reasonable chance 
 of interaction between the antioxidant,
 rather than with other components of the cell.
-These high concentrations will be physiologically unrealistic.
+These high concentrations likely to be physiologically unrealistic.
 \item
 A potential free radical scavenging agent would also need to have a 
 sufficiently high rate constant to effectively compete with the 
 enzymatic defense system. Unless the rate of reaction is of the order of
-$1 \times 10^6 M^{-1} s^{-1}$ or greater, they will have little 
+$1 \times 10^7 M^{-1} s^{-1}$ or greater, they will have little 
 effect on the rate of protein oxidation.
 \item
 There also needs to be an effective and efficient means of regenerating the
@@ -759,7 +752,13 @@ Revisiting the reactions of superoxide with glutathione and other thiols.
 pp. {68--71}.
 doi:10.1016/j.abb.2015.11.028.
 
-
+\bibitem[ Padayatty(2003)] {Padayatty:2003}
+Padayatty, Sebastian J. .
+(2003).
+Vitamin C as an Antioxidant: Evaluation of Its Role in Disease Prevention.
+{ \em Journal of the American College of Nutrition},  22.
+pp. {18--35}.
+doi:10.1080/07315724.2003.10719272.
 %
 \end{thebibliography}
 
